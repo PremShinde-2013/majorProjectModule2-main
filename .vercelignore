@@ -1,0 +1,4 @@
+node_modules/**
+!.vercel_build_output/**
+*.test.js
+docs/
