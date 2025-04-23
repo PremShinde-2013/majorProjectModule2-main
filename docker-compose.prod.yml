@@ -23,8 +23,8 @@ services:
       options:
         max-size: "10m"
         max-file: "3"
-    ports:
-      - 1111:1111
+    ports: 
+      - 3000:3000
     healthcheck:
       test: ["CMD", "curl", "-f", "http://blinko-website:1111/"]
       interval: 30s 

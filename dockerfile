@@ -75,9 +75,9 @@ COPY --from=builder /app/node_modules/@prisma ./node_modules/@prisma
 COPY --from=builder /app/node_modules/sqlite3 ./node_modules/sqlite3
 
 ENV NODE_ENV=production \
-    PORT=1111 \
+    PORT=3000 \
     HOSTNAME=0.0.0.0
 
-EXPOSE 1111
+EXPOSE 3000
 
 CMD ["sh", "-c", "prisma migrate deploy && node seed.js && node server.js"]
